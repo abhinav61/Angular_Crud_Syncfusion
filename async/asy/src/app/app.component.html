@@ -1,0 +1,21 @@
+<ejs-grid height="300px" [dataSource]= "products | async" 
+[editSettings]="editSettings" 
+[allowPaging]="true" 
+[pageSettings] = 'pageSettings'
+[allowSorting]="true"
+[allowFiltering]="true"
+[allowGrouping] = "true"
+
+[toolbar] = "toolbar"
+(dataSourceChanged)="dataSourceChanged($event)"
+(dataStateChange)= "dataStateChange($event)">  
+<e-columns>
+    <!-- <e-column field = 'id' headerText = 'ID' isPrimaryKey=true ></e-column> -->
+    <e-column field = 'name' headerText = 'Name'></e-column>
+    <e-column field = 'location' headerText = 'City'></e-column>
+    <e-column field = 'contact'  headerText = 'Contact'></e-column>
+</e-columns>
+
+
+  
+</ejs-grid>
